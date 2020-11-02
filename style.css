@@ -1,0 +1,76 @@
+
+* {
+  font-family: Lato, "Lucida Grande", Tahoma, Sans-Serif;/*Fallback Font Stacks allow for more robust web typography*/
+}
+
+
+.Qtable {
+  border-collapse: collapse; /* Borders are collapsed into a single border when possible (border-spacing and empty-cells properties have no effect) */
+  margin: 25px 0; /* top and bototm spacing*/
+  min-width: 400px; /*gives minimum size to table to keep a certain aesthetic. Table will expand if needed.*/
+  max-width: 600px;
+  border-radius: 5px 5px 0 0; /* adds the rounded corners to the table; AKA radius of elements corners*/
+  overflow: hidden; /*Used here in conjunction with border-radius because <tr> in the <th> still have their 0 element radius(square) so this will ensure 
+  content (especially images) can't bleed out of the container*/
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.15); /*attaches one or more shadows to an element */
+  margin-left:auto; 
+  margin-right:auto;
+  margin-top:auto;
+  margin-bottom:auto;
+}
+
+.Qtable thead tr {
+  background-color: #FF4136;
+  color: #ffffff;
+  font-weight: bold;/*As Kenny Loggins would say: https://www.youtube.com/watch?v=siwpn14IE7E&list=PLewmtVKho2IMiolssLYyssEnSgUCmxYZm&index=24&t=0s*/
+  font-size: 1.4em;
+}
+
+.Qtable th,
+.Qtable td {
+  padding: 12px 15px; /* targets the cells inside table head and table rows*/
+  
+}
+
+.Qtable tbody tr {
+  border-bottom: 1px solid #dddddd; /* targets all table rows in table body with a light grey border bottom. Added for extra aesthetic and separation*/
+}
+
+.Qtable tbody tr:last-of-type {
+    border-bottom: 2px solid #FF4136; /*targets last table row and adds red broder bottom to match the top*/
+  }
+
+/* Collapsible styling*/
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  cursor: pointer;
+  padding: 12px 15px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  background-color: white;
+  font-size: 0.9em; /*Makes table font slightly smaller than surrounding font which can increase readability. 
+  Helps with fitting tables on mobile devices due to limited screen space. 
+  Relative to the font-size of the element (4em means 4 times the size of the current font) */
+}
+
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    font-size: 0.9em;
+  }
+
+  .collapsible:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
