@@ -36,9 +36,9 @@
   border-bottom: 1px solid #dddddd; /* targets all table rows in table body with a light grey border bottom. Added for extra aesthetic and separation*/
 }
 
-/*.Qtable tbody tr:last-of-type {
+.Qtable tbody tr:last-of-type {
     border-bottom: 2px solid #FF4136;
-  }*/
+  }
 
 /* Collapsible styling*/
 /* Style the button that is used to open and close the collapsible content */
